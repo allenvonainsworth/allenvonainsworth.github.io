@@ -6,10 +6,15 @@ const initialMovies = [
     year: 2010,
     genre: "Sci-Fi",
     rating: 8.8,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Inception",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Inception+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
     description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     trailer: "https://www.youtube.com/embed/YoHD9XEInc0",
+    cast: [
+      { name: "Leonardo DiCaprio", profile: "https://image.tmdb.org/t/p/w185/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg" },
+      { name: "Marion Cotillard", profile: "https://image.tmdb.org/t/p/w185/7qYjSphQ2bnapz2KWhJ8HjG9r1M.jpg" },
+      { name: "Tom Hardy", profile: "https://image.tmdb.org/t/p/w185/yVGF9FvDxTDPhGimTbZNfghpllW.jpg" }
+    ],
     reviews: [
       { user: "John Doe", rating: 9, comment: "Mind-bending masterpiece!" },
       { user: "Jane Smith", rating: 8, comment: "Complex but rewarding." }
@@ -21,10 +26,15 @@ const initialMovies = [
     year: 2008,
     genre: "Action",
     rating: 9.0,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Dark+Knight",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Dark+Knight+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/hqkIcbrOHL86UncnHIsHVcVmzue.jpg",
     description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     trailer: "https://www.youtube.com/embed/EXeTwQWrcwY",
+    cast: [
+      { name: "Christian Bale", profile: "https://image.tmdb.org/t/p/w185/vqdaM1YW45vPGRKrtHGfQGof2mT.jpg" },
+      { name: "Heath Ledger", profile: "https://image.tmdb.org/t/p/w185/5Y9HnYYa9jF4NunY9lSgJGjSe8E.jpg" },
+      { name: "Aaron Eckhart", profile: "https://image.tmdb.org/t/p/w185/7kQB80VD9ZHgVsFtzLawONOWx6j.jpg" }
+    ],
     reviews: [
       { user: "Bob Wilson", rating: 10, comment: "Heath Ledger's Joker is iconic." },
       { user: "Alice Brown", rating: 9, comment: "Action-packed and thrilling." }
@@ -36,10 +46,15 @@ const initialMovies = [
     year: 1994,
     genre: "Crime",
     rating: 8.9,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Pulp+Fiction",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Pulp+Fiction+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     trailer: "https://www.youtube.com/embed/s7EdQ4FqbhY",
+    cast: [
+      { name: "John Travolta", profile: "https://image.tmdb.org/t/p/w185/7bVTevQLZQZ8pKC2SIqAzWI7PV.jpg" },
+      { name: "Samuel L. Jackson", profile: "https://image.tmdb.org/t/p/w185/nCJJ3NVksYNPsfMeCv8sSs3wTuE.jpg" },
+      { name: "Uma Thurman", profile: "https://image.tmdb.org/t/p/w185/8o9nxpOhMLWQ4XDXx5zNJW2Hq7.jpg" }
+    ],
     reviews: [
       { user: "Charlie Davis", rating: 9, comment: "Quentin Tarantino at his best." },
       { user: "Diana Evans", rating: 8, comment: "Non-linear storytelling genius." }
@@ -51,10 +66,15 @@ const initialMovies = [
     year: 1994,
     genre: "Drama",
     rating: 9.3,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Shawshank",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Shawshank+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
     description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     trailer: "https://www.youtube.com/embed/6hB3S9bIaco",
+    cast: [
+      { name: "Tim Robbins", profile: "https://image.tmdb.org/t/p/w185/4HQ1nHt8rzbB7B4LkT2g8q4j8.jpg" },
+      { name: "Morgan Freeman", profile: "https://image.tmdb.org/t/p/w185/jPsLqiYGSofU4s6BjrxnefMfGB.jpg" },
+      { name: "Bob Gunton", profile: "https://image.tmdb.org/t/p/w185/8z7i7z9z9z9z9z9z9z9z9z9z9z9.jpg" }
+    ],
     reviews: [
       { user: "Eve Foster", rating: 10, comment: "Timeless classic." },
       { user: "Frank Garcia", rating: 9, comment: "Hope and friendship prevail." }
@@ -66,10 +86,15 @@ const initialMovies = [
     year: 1994,
     genre: "Drama",
     rating: 8.8,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Forrest+Gump",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Forrest+Gump+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/3h1JZGDhZ8nzxdgvkxha0qBqi05.jpg",
     description: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
     trailer: "https://www.youtube.com/embed/bLvqoHBptjg",
+    cast: [
+      { name: "Tom Hanks", profile: "https://image.tmdb.org/t/p/w185/xndWFsBlClOJYTdZvCudkaS1KdR.jpg" },
+      { name: "Robin Wright", profile: "https://image.tmdb.org/t/p/w185/1wY4TtOTCFvW9Q43W7iJJglwUw.jpg" },
+      { name: "Gary Sinise", profile: "https://image.tmdb.org/t/p/w185/7LnP9Q2xK8QzQhQhQhQhQhQhQhQ.jpg" }
+    ],
     reviews: [
       { user: "Grace Hill", rating: 9, comment: "Life is like a box of chocolates." },
       { user: "Henry Ingram", rating: 8, comment: "Tom Hanks is brilliant." }
@@ -81,10 +106,15 @@ const initialMovies = [
     year: 1999,
     genre: "Sci-Fi",
     rating: 8.7,
-    poster: "https://via.placeholder.com/300x450/001122/FFD700?text=Matrix",
-    backdrop: "https://via.placeholder.com/1920x1080/000011/FFD700?text=Matrix+Backdrop",
+    poster: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/fNG7i7RqMErkcqhohV2a6cV1Ehy.jpg",
     description: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
     trailer: "https://www.youtube.com/embed/vKQi3bBA1y8",
+    cast: [
+      { name: "Keanu Reeves", profile: "https://image.tmdb.org/t/p/w185/4D0PpNI0kmP58hgrwGC3IktOuF.jpg" },
+      { name: "Laurence Fishburne", profile: "https://image.tmdb.org/t/p/w185/8suOhUmPbfLj7o9SRp5HtV0Y5.jpg" },
+      { name: "Carrie-Anne Moss", profile: "https://image.tmdb.org/t/p/w185/8iATAc5z5f4ZU4qG7rjNhqQXUa.jpg" }
+    ],
     reviews: [
       { user: "Ivy Johnson", rating: 9, comment: "Red pill or blue pill?" },
       { user: "Jack King", rating: 8, comment: "Groundbreaking effects." }
