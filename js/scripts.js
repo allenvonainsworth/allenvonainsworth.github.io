@@ -1,5 +1,5 @@
 // Sample movie data
-const movies = [
+const initialMovies = [
   {
     id: 1,
     title: "Inception",
@@ -91,6 +91,34 @@ const movies = [
     ]
   }
 ];
+
+// Make a copy of initial movies that can be modified
+let movies = [...initialMovies];
+
+// Load reviews from localStorage
+function loadReviewsFromStorage() {
+  const storedReviews = localStorage.getItem('movieReviews');
+  if (storedReviews) {
+    const reviewsData = JSON.parse(storedReviews);
+    movies.forEach(movie => {
+      if (reviewsData[movie.id]) {
+        movie.reviews = reviewsData[movie.id];
+      }
+    });
+  }
+}
+
+// Save reviews to localStorage
+function saveReviewsToStorage() {
+  const reviewsData = {};
+  movies.forEach(movie => {
+    reviewsData[movie.id] = movie.reviews;
+  });
+  localStorage.setItem('movieReviews', JSON.stringify(reviewsData));
+}
+
+// Load reviews on page load
+loadReviewsFromStorage();
 
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -241,6 +269,11 @@ function loadMovieDetail() {
   document.getElementById('movie-poster').src = movie.poster;
   document.getElementById('movie-backdrop').style.backgroundImage = `url(${movie.backdrop})`;
 
+  // Set movie stats
+  document.getElementById('movie-year-stat').textContent = movie.year;
+  document.getElementById('movie-genre-stat').textContent = movie.genre;
+  document.getElementById('movie-rating-stat').textContent = movie.rating;
+
   // Load reviews
   const reviewsContainer = document.getElementById('movie-reviews');
   reviewsContainer.innerHTML = movie.reviews.map(review => `
@@ -283,6 +316,10 @@ function setupReviewForm() {
   const reviewForm = document.getElementById('review-form');
   if (!reviewForm) return;
 
+  // Populate movie select
+  const movieSelect = document.getElementById('movie-select');
+  movieSelect.innerHTML = movies.map(movie => `<option value="${movie.title}">${movie.title}</option>`).join('');
+
   reviewForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -311,7 +348,8 @@ function setupReviewForm() {
       errorMessage += 'Please select a movie.\n';
     }
 
-    if (!rating) {
+    const ratingValue = document.getElementById('rating-input').value;
+    if (!ratingValue) {
       isValid = false;
       errorMessage += 'Please select a rating.\n';
     }
@@ -328,7 +366,22 @@ function setupReviewForm() {
 
     // Success
     alert('Review submitted successfully!');
-    reviewForm.reset();
+
+    // Add review to movie data
+    const selectedMovie = movies.find(m => m.title === movie);
+    if (selectedMovie) {
+      selectedMovie.reviews.push({
+        user: name,
+        rating: parseInt(ratingValue),
+        comment: comment
+      });
+
+      // Save to localStorage
+      saveReviewsToStorage();
+    }
+
+    // Redirect to movie detail page
+    window.location.href = `movie-detail.html?id=${selectedMovie.id}`;
   });
 }
 
