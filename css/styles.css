@@ -126,6 +126,13 @@ p, span, div {
   border-color: var(--golden-yellow);
 }
 
+/* Movie Detail Backdrop */
+#movie-backdrop {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .movie-card img {
   width: 100%;
   height: 300px;

@@ -13,7 +13,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <i class="fas fa-film"></i> AdKa'napanCinema
+        <i class="fas fa-film"></i> CinemaScope
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -42,16 +42,16 @@
 
   <!-- Movie Backdrop -->
   <section class="hero" id="movie-backdrop" style="height: 60vh;">
-    <div class="container h-100">
-      <div class="row h-100 align-items-end">
+    <div class="container h-100 d-flex align-items-end">
+      <div class="row h-10 align-items-end">
         <div class="col-md-4">
           <img id="movie-poster" src="" alt="Movie Poster" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-8 text-white">
           <h1 id="movie-title"></h1>
           <p class="mb-2"><span id="movie-year"></span> • <span id="movie-genre"></span></p>
-          <div class="rating mb-3" id="movie-rating"></div>
-          <button id="trailer-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trailer-modal">
+          <div class="rating" id="movie-rating"></div>
+          <button id="trailer-btn" class="btn btn-primary mt-3">
             <i class="fas fa-play"></i> Watch Trailer
           </button>
         </div>
@@ -96,7 +96,7 @@
     <div class="container">
       <h2 class="mb-4">Community Reviews</h2>
       <div id="movie-reviews">
-        <!-- Reviews will be loaded here by JavaScript -->
+        
       </div>
       <div class="text-center mt-4">
         <a href="reviews.html" class="btn btn-primary">Write a Review</a>
@@ -114,7 +114,7 @@
         </div>
         <div class="modal-body">
           <div class="ratio ratio-16x9">
-            <iframe id="trailer-iframe" src="" allowfullscreen></iframe>
+            <iframe id="trailer-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0"></iframe>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
   <!-- Footer -->
   <footer class="bg-dark text-center py-4">
     <div class="container">
-      <p>&copy; 2023 adikaanapan@cinemascope.com. All rights reserved.</p>
+      <p>&copy; 2023 support@cinemascope.com. All rights reserved.</p>
     </div>
   </footer>
 
